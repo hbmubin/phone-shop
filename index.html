@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Phone Shop</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="text-4xl text-center">Phone Shop</h2>
+    </header>
+    <main class="container mx-auto mt-10">
+      <section class="my-10 text-center">
+        <input
+          id="search-field"
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered w-full max-w-xs"
+        />
+        <button
+          onclick="handleSearchButton()"
+          class="btn bg-indigo-500 text-white"
+        >
+          Search
+        </button>
+      </section>
+      <section>
+        <div
+          id="loading-container"
+          class="hidden text-center my-28 text-indigo-600"
+        >
+          <span class="loading loading-dots loading-lg"></span>
+        </div>
+        <div
+          id="phone-container"
+          class="gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+        ></div>
+        <div id="show-all-container" class="hidden text-center mt-7">
+          <button onclick="handleShowAll()" class="btn bg-indigo-600 text-white">Show all</button>
+        </div>
+      </section>
+    </main>
+    <footer></footer>
+    <!-- JavaScript -->
+    <script src="script/phone.js"></script>
+  </body>
+</html>
